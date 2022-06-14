@@ -26,6 +26,13 @@ class Config(object):
 
     FB_SCOPE = os.environ.get("FB_SCOPE")
 
+    GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID")
+    GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET")
+
+    GOOGLE_AUTHORIZATION_BASE_URL = os.environ.get("GOOGLE_AUTHORIZATION_BASE_URL")
+    GOOGLE_SCOPE = os.environ.get("GOOGLE_SCOPE")
+    GOOGLE_TOKEN_URL = os.environ.get("GOOGLE_TOKEN_URL")
+
 class ProductionConfig(Config):
     DEBUG = False
     TESTING = False

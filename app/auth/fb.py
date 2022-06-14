@@ -24,14 +24,6 @@ FB_SCOPE = app.config["FB_SCOPE"]
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 
-
-@fb_auth.route("/")
-def index():
-    return """
-    <a href="/fb-login">Login with Facebook</a>
-    """
-
-
 @fb_auth.route("/fb-login")
 def login():
     print(url_for('fb.callback'))

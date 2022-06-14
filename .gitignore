@@ -7,7 +7,7 @@ __pycache__/
 .env1
 
 #config file
-.env
+.env*
 
 # C extensions
 *.so

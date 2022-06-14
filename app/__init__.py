@@ -27,15 +27,16 @@ def create_app(test_config=None):
     with app.app_context():
 
         #import modules
+        from app.auth import main
         from app.auth.fb import fb_auth
-        #from app.auth.google import google_auth
+        from app.auth.google import google_auth
         #from app.auth.twitter import twitter_auth
         
 
-        #register blueprints        
-
+        #register blueprints    
+        app.register_blueprint(main)
         app.register_blueprint(fb_auth)
-        #app.register_blueprint(google_auth)
+        app.register_blueprint(google_auth)
         #app.register_blueprint(twitter_auth)
         
         
